@@ -45,13 +45,12 @@
         const axisHelper = new THREE.AxisHelper(2); //軸の長さ　X：赤、Y：緑、z：青
         scene.add(axisHelper);
 
-        // 箱を作成
-        var geometry = new THREE.BoxGeometry(1, 1, 1);
-        var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
-        var box = new THREE.Mesh(geometry, material);
-        box.position.set(0,0,0); //位置を指定
-        scene.add(box);   // シーンに追加
-
+        //torus
+        var torusKnotGeometory = new THREE.TorusKnotGeometory(1.5,0.3,10,6,3,2);
+        var torusKnotMaterial = new THREE. MeshPhongMaterial( { color: 0x0000ff, wireframe: true } );
+        var torusKnot = new THREE.Mesh( torusKnotGeometry, torusKnotMaterial );
+        torusKnot.position.set( 0, 0, -15 );
+        scene.add( torusKnot );
         update();
 
         // 毎フレーム時に実行されるループイベントです
