@@ -90,11 +90,11 @@
         var sphereGeometry = new THREE.SphereGeometry( 0.05, 32, 32 ); 
         var sphereMaterial = new THREE. MeshPhongMaterial( { color: 0xffffff,wireframe:true } );
         var sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
-        sphere.position.set( 0, 1.5, 1.6);
+        sphere.position.set( 0, 1.4, 1.6);
         scene.add( sphere );
         
         var sphere2 = new THREE.Mesh( sphereGeometry, sphereMaterial );
-        sphere2.position.set( 0, 1.5, -1.6);
+        sphere2.position.set( 0, 1.4, -1.6);
         scene.add( sphere2 );
         
 
@@ -108,16 +108,56 @@
         var cylinder3 = new THREE.Mesh( cylinderGeometry3, cylinderMaterial );
         cylinder3.position.set( 0, 2.6, 0);
         scene.add( cylinder3 );
+
+        const x_size = window.innerWidth;
+        const y_size = window.innerHeight;
+        const length = 600;
+        const plane_scale = 0.5;
+        const plane_scale02 = 10;
+        const plane = [];
+ 
+        for(let i=0; i<length; i++){
+          let geometry = new THREE.PlaneGeometry( plane_scale, plane_scale02 );
+          var material = new THREE.MeshBasicMaterial({
+        color: '0xafafb0',
+        opacity: 0.4,
+        transparent: true,
+        side: THREE.DoubleSide
+      });
+      plane[i] = new THREE.Mesh( geometry, material );
+ 
+      plane[i].position.x = x_size * (Math.random() - 0.5);
+      plane[i].position.y = y_size * (Math.random() - 0.5);
+      plane[i].position.z = x_size * (Math.random() - 0.5);
+      scene.add( plane[i] );
+    }
+ 
+    function random(min, max) {
+      let rand = Math.floor((min + (max - min + 1) * Math.random()));
+      return rand;
+    }
         update();
 
         
 
         // 毎フレーム時に実行されるループイベントです
         function update() {
+          for(let i=0; i<length; i++){
+               plane[i].position.x += (random(-5, 5)*0);
+               plane[i].position.y += 5.5;
+            if (plane[i].position.y > height) {
+              plane[i].position.x = x_size * (Math.random() - 0.5);
+              plane[i].position.y = 0;
+          }
+        }
           // レンダリング
           renderer.render(scene, camera);
           requestAnimationFrame(update);
-          // 箱を回転させる
+        }
+        function start() {
+          renderer.render(scene, camera);
+          }
+          start();
         }
       }
     </script>
