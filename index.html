@@ -45,21 +45,29 @@
         const axisHelper = new THREE.AxisHelper(2); //軸の長さ　X：赤、Y：緑、z：青
         scene.add(axisHelper);
 
+        var geometry = new THREE.PlaneGeometry(1,2,2);
+        var material = new THREE.MeshPhongMaterial( { color: 0x0000ff } );
+        var plane = new THREE.Mesh(geometry,material);
+        plane.position.z=-5;
+        scene.add(plane);
+
         //円柱
         var cylinderGeometry = new THREE.CylinderGeometry( 1, 1, 2, 12 ); 
         var cylinderMaterial = new THREE. MeshPhongMaterial( { color: 0x0000ff } );
-        var cylinder = new THREE.Mesh( cylimnderGeometry, cylinderMaterial );
+        var cylinder = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
         torus.position.set( 0, 0, -5);
         scene.add( cylinder );
         
 
         //棒
-        var cylinderGeometry = new THREE.CylinderGeometry( 0.2, 0.2, 2, 12 ); 
-        var cylinderMaterial = new THREE. MeshPhongMaterial( { color: 0x0000ff } );
-        var cylinder = new THREE.Mesh( cylimnderGeometry, cylinderMaterial );
+        var cylinderGeometry2 = new THREE.CylinderGeometry( 0.2, 0.2, 2, 12 ); 
+        var cylinderMaterial2 = new THREE. MeshPhongMaterial( { color: 0x000000 } );
+        var cylinder2 = new THREE.Mesh( cylinderGeometry2, cylinderMaterial2 );
         torus.position.set( 0, 0, 10);
-        scene.add( cylinder );
+        scene.add( cylinder2 );
         update();
+
+        
 
         // 毎フレーム時に実行されるループイベントです
         function update() {
