@@ -54,10 +54,10 @@
 
         var triangle = new THREE.MeshBasicMaterial({color:0xffffa8});
         var shape = new THREE.Shape();
-        shape.moveTo(0,1.5);
-        shape.lineTo(0.15,1);
-        shape.lineTo(-0.15,1);
-        shape.lineTo(0,1.5);
+        shape.moveTo(0,2.5);
+        shape.lineTo(0.2,2);
+        shape.lineTo(-0.2,2);
+        shape.lineTo(0,2.5);
         var Tgeometry = new THREE.ShapeGeometry(shape);
         var Striangle = new THREE.Mesh(Tgeometry,triangle);
         Striangle.rotation.set(-0.8,0,0);
@@ -72,7 +72,7 @@
         
 
         //棒
-        var cylinderGeometry2 = new THREE.CylinderGeometry( 0.05, 0.05, 2, 12 ); 
+        var cylinderGeometry2 = new THREE.CylinderGeometry( 0.03, 0.03, 2, 12 ); 
         var cylinderMaterial2 = new THREE. MeshPhongMaterial( { color: 0x00ffff } );
         var cylinder2 = new THREE.Mesh( cylinderGeometry2, cylinderMaterial2 );
         cylinder2.position.set( 0, 0.7, 0);
