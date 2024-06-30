@@ -84,12 +84,13 @@
         var cylinder2 = new THREE.Mesh( cylinderGeometry2, cylinderMaterial );
         cylinder2.position.set( 0, 0.7, 0);
         scene.add( cylinder2 );
-
+        //先端
         var cylinderGeometry3 = new THREE.CylinderGeometry( 0.03, 0.03, 0.2, 12 ); 
         var cylinder3 = new THREE.Mesh( cylinderGeometry3, cylinderMaterial );
         cylinder3.position.set( 0, 2.6, 0);
         scene.add( cylinder3 );
-
+        
+        //雨を降らせる
         const x_size = window.innerWidth;
         const y_size = window.innerHeight;
         const length = 600;
@@ -107,9 +108,9 @@
       });
       plane[i] = new THREE.Mesh( geometry, material );
  
-      plane[i].position.x = x_size * (Math.random() - 0.5);
-      plane[i].position.y = y_size * (Math.random() - 0.5);
-      plane[i].position.z = x_size * (Math.random() - 0.5);
+      plane[i].position.x = x_size * (Math.random() + 0.5);
+      plane[i].position.y = y_size * (Math.random() + 0.5);
+      plane[i].position.z = x_size * (Math.random() + 0.5);
       scene.add( plane[i] );
     }
  
