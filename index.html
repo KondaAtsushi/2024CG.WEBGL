@@ -74,7 +74,7 @@
         Striangle2.rotation.set(-0.5,-0.5,0);
         scene.add(Striangle2);
 
-        var coneGeometry = new THREE.ConeGeometry( 1.4, 1.2, 8 ); 
+        var coneGeometry = new THREE.ConeGeometry( 1.5, 1.2, 8 ); 
         var coneMaterial = new THREE. MeshPhongMaterial( { color: 0x00ffff } );
         var cone = new THREE.Mesh( coneGeometry, coneMaterial );
         cone.position.set( 0, 2, 0);
@@ -98,7 +98,7 @@
         var cylinderGeometry3 = new THREE.CylinderGeometry( 0.03, 0.03, 0.2, 12 ); 
         var cylinderMaterial3 = new THREE. MeshPhongMaterial( { color: 0x00ffff } );
         var cylinder3 = new THREE.Mesh( cylinderGeometry3, cylinderMaterial3 );
-        cylinder3.position.set( 0, 2.5, 0);
+        cylinder3.position.set( 0, 2.8, 0);
         scene.add( cylinder3 );
         update();
 
