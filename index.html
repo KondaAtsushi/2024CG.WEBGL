@@ -54,10 +54,10 @@
 
         var triangle = new THREE.MeshBasicMaterial({color:0xffffa8});
         var shape = new THREE.Shape();
-        shape.moveTo(4,4);
-        shape.lineTo(0.3,-3);
-        shape.lineTo(-0.3,-3);
-        shape.lineTo(0,4);
+        shape.moveTo(0,0,4);
+        shape.lineTo(0.3,0,-3);
+        shape.lineTo(-0.3,0,-3);
+        shape.lineTo(0,0,4);
         var Tgeometry = new THREE.ShapeGeometry(shape);
         var Striangle = new THREE.Mesh(Tgeometry,triangle);
         Striangle.position.set(0,0,0);
