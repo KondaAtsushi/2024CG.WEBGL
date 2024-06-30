@@ -46,33 +46,6 @@
         const axisHelper = new THREE.AxisHelper(2); //軸の長さ　X：赤、Y：緑、z：青
         scene.add(axisHelper);
 
-        var geometry = new THREE.PlaneGeometry(2,2,2);
-        var material = new THREE.MeshPhongMaterial( { color: 0x0000ff } );
-        var plane = new THREE.Mesh(geometry,material);
-        plane.position.z=-5;
-        scene.add(plane);
-
-        var triangle = new THREE.MeshBasicMaterial({color:0xffffa8});
-        var shape = new THREE.Shape();
-        shape.moveTo(0,3);
-        shape.lineTo(0.3,3);
-        shape.lineTo(-0.3,3);
-        shape.lineTo(0,3);
-        var Tgeometry = new THREE.ShapeGeometry(shape);
-        var Striangle = new THREE.Mesh(Tgeometry,triangle);
-        Striangle.rotation.set(-0.5,0,0);
-        scene.add(Striangle);
-
-        var triangle2 = new THREE.MeshBasicMaterial({color:0xffffa8});
-        var shape2 = new THREE.Shape();
-        shape2.moveTo(0,3);
-        shape2.lineTo(-0.3,3);
-        shape2.lineTo(-0.6,3);
-        shape2.lineTo(0,3);
-        var Tgeometry2 = new THREE.ShapeGeometry(shape2);
-        var Striangle2 = new THREE.Mesh(Tgeometry2,triangle2);
-        Striangle2.rotation.set(-0.5,-0.5,0);
-        scene.add(Striangle2);
 
         var coneGeometry = new THREE.ConeGeometry( 1.5, 1.2, 8 ); 
         var coneMaterial = new THREE. MeshLambertMaterial( { color: 0x00ffff } );
