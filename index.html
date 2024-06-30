@@ -63,7 +63,7 @@
         var cylinderGeometry2 = new THREE.CylinderGeometry( 0.2, 0.2, 2, 12 ); 
         var cylinderMaterial2 = new THREE. MeshPhongMaterial( { color: 0x000000 } );
         var cylinder2 = new THREE.Mesh( cylinderGeometry2, cylinderMaterial2 );
-        cylinder2.position.set( 0, 0, 10);
+        cylinder2.position.set( 0, 0, 5);
         scene.add( cylinder2 );
         update();
 
@@ -75,8 +75,6 @@
           renderer.render(scene, camera);
           requestAnimationFrame(update);
           // 箱を回転させる
-          box.rotation.x += 0.01;
-          box.rotation.y += 0.01;
         }
       }
     </script>
