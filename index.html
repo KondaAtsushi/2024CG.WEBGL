@@ -54,13 +54,13 @@
 
         var triangle = new THREE.MeshBasicMaterial({color:0xffffa8});
         var shape = new THREE.Shape();
-        shape.moveTo(0,1);
+        shape.moveTo(0,1.15);
         shape.lineTo(1,-1.15);
         shape.lineTo(-1,-1.15);
         shape.lineTo(0,1.15);
         var Tgeometry = new THREE.ShapeGeometry(shape);
         var Striangle = new THREE.Mesh(Tgeometry,triangle);
-        Striangle.rotation.set(-0.3,0,0);
+        Striangle.rotation.set(-0.6,0,0);
         scene.add(Striangle);
 
         //円柱
