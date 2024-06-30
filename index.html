@@ -46,7 +46,7 @@
         scene.add(axisHelper);
 
         //円柱
-        var cylinderGeometry = new THREE.ClinderGeometry( 1, 1, 2, 12 ); 
+        var cylinderGeometry = new THREE.CylinderGeometry( 1, 1, 2, 12 ); 
         var cylinderMaterial = new THREE. MeshPhongMaterial( { color: 0x0000ff } );
         var cylinder = new THREE.Mesh( cylimnderGeometry, cylinderMaterial );
         torus.position.set( 0, 0, -5);
@@ -54,7 +54,7 @@
         
 
         //棒
-        var cylinderGeometry = new THREE.ClinderGeometry( 0.2, 0.2, 2, 12 ); 
+        var cylinderGeometry = new THREE.CylinderGeometry( 0.2, 0.2, 2, 12 ); 
         var cylinderMaterial = new THREE. MeshPhongMaterial( { color: 0x0000ff } );
         var cylinder = new THREE.Mesh( cylimnderGeometry, cylinderMaterial );
         torus.position.set( 0, 0, 10);
