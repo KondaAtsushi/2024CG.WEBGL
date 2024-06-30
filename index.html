@@ -60,8 +60,19 @@
         shape.lineTo(0,3);
         var Tgeometry = new THREE.ShapeGeometry(shape);
         var Striangle = new THREE.Mesh(Tgeometry,triangle);
-        Striangle.rotation.set(-0.5,0,0);
+        Striangle.rotation.set(-0.4,0,0);
         scene.add(Striangle);
+
+        var triangle2 = new THREE.MeshBasicMaterial({color:0xfff0a8});
+        var shape2 = new THREE.Shape();
+        shape2.moveTo(0,3);
+        shape2.lineTo(0.3,2);
+        shape2.lineTo(-0.3,2);
+        shape2.lineTo(0,3);
+        var Tgeometry2 = new THREE.ShapeGeometry(shape2);
+        var Striangle2 = new THREE.Mesh(Tgeometry2,triangle2);
+        Striangle2.rotation.set(-0.4,0,0.4);
+        scene.add(Striangle2);
 
         //円柱
         var cylinderGeometry = new THREE.CylinderGeometry( 0.1, 0.1, 0.5, 12 ); 
