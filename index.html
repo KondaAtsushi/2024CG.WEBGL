@@ -24,7 +24,7 @@
 
         // カメラを作成
         const camera = new THREE.PerspectiveCamera(45, width / height);
-        const controls = new THREE.OrbitControls(camera);
+        var controls = new OrbitControls(camera,renderer.domElement);
         // カメラの初期座標を設定
         camera.position.set(1, 2, 5); //位置を指定
         camera.lookAt(0, 0, 0); //見つめる方向
