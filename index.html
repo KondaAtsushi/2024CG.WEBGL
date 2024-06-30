@@ -117,7 +117,7 @@
         function update() {
           for(let i=0; i<length; i++){
                plane[i].position.x += (random(-5, 5)*0);
-               plane[i].position.y += 5.5;
+               plane[i].position.y -= 5.5;
             if (plane[i].position.y > height) {
               plane[i].position.x = x_size * (Math.random() - 0.5);
               plane[i].position.y = 0;
