@@ -45,13 +45,20 @@
         const axisHelper = new THREE.AxisHelper(2); //軸の長さ　X：赤、Y：緑、z：青
         scene.add(axisHelper);
 
-        //ドーナッツ
-        var torusGeometry = new THREE.TorusGeometry( 0.5, 0.2, 6, 12 ); 
-        //半径、ドーナッツの太さ、ドーナッツのチューブ方向の分割数、水平方向の分割数
-        var torusMaterial = new THREE. MeshPhongMaterial( { color: 0x0000ff } );
-        var torus = new THREE.Mesh( torusGeometry, torusMaterial );
+        //円柱
+        var cylinderGeometry = new THREE.ClinderGeometry( 1, 1, 2, 12 ); 
+        var cylinderMaterial = new THREE. MeshPhongMaterial( { color: 0x0000ff } );
+        var cylinder = new THREE.Mesh( cylimnderGeometry, cylinderMaterial );
         torus.position.set( 0, 0, -5);
-        scene.add( torus );
+        scene.add( cylinder );
+        
+
+        //棒
+        var cylinderGeometry = new THREE.ClinderGeometry( 0.2, 0.2, 2, 12 ); 
+        var cylinderMaterial = new THREE. MeshPhongMaterial( { color: 0x0000ff } );
+        var cylinder = new THREE.Mesh( cylimnderGeometry, cylinderMaterial );
+        torus.position.set( 0, 0, 10);
+        scene.add( cylinder );
         update();
 
         // 毎フレーム時に実行されるループイベントです
