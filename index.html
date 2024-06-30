@@ -94,6 +94,12 @@
         var cylinder2 = new THREE.Mesh( cylinderGeometry2, cylinderMaterial2 );
         cylinder2.position.set( 0, 0.7, 0);
         scene.add( cylinder2 );
+
+        var cylinderGeometry3 = new THREE.CylinderGeometry( 0.03, 0.03, 0.2, 12 ); 
+        var cylinderMaterial3 = new THREE. MeshPhongMaterial( { color: 0x00ffff } );
+        var cylinder3 = new THREE.Mesh( cylinderGeometry3, cylinderMaterial3 );
+        cylinder3.position.set( 0, 2.5, 0);
+        scene.add( cylinder3 );
         update();
 
         
