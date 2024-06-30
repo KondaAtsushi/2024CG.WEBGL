@@ -54,10 +54,10 @@
 
         var triangle = new THREE.MeshBasicMaterial({color:0xffffa8});
         var shape = new THREE.Shape();
-        shape.moveTo(0,100);
-        shape.lineTo(100,-50);
-        shape.lineTo(-100,-50);
-        shape.lineTo(0,100);
+        shape.moveTo(0,3);
+        shape.lineTo(3,-1.5);
+        shape.lineTo(-3,-1.5);
+        shape.lineTo(0,3);
         var Tgeometry = new THREE.ShapeGeometry(shape);
         scene.add(new THREE.Mesh(Tgeometry,triangle));
 
@@ -73,7 +73,7 @@
         var cylinderGeometry2 = new THREE.CylinderGeometry( 0.1, 0.1, 1, 12 ); 
         var cylinderMaterial2 = new THREE. MeshPhongMaterial( { color: 0x00ffff } );
         var cylinder2 = new THREE.Mesh( cylinderGeometry2, cylinderMaterial2 );
-        cylinder2.position.set( 0, 0, 0);
+        cylinder2.position.set( 0, 0.1, 0);
         scene.add( cylinder2 );
         update();
 
