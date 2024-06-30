@@ -75,7 +75,7 @@
         scene.add(Striangle2);
 
         var coneGeometry = new THREE.ConeGeometry( 1.5, 1.2, 8 ); 
-        var coneMaterial = new THREE. MeshPhongMaterial( { color: 0x00ffff } );
+        var coneMaterial = new THREE. MeshLambertMaterial( { color: 0x00ffff } );
         var cone = new THREE.Mesh( coneGeometry, coneMaterial );
         cone.position.set( 0, 2, 0);
         scene.add( cone );
